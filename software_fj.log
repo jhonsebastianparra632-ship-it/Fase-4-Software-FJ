@@ -1,0 +1,178 @@
+2026-11-27 18:21:16,954 | INFO | Inicio de la simulación Software FJ.
+2026-11-27 18:21:16,954 | INFO | Registro exitoso: Cliente C1.
+2026-11-27 18:21:16,954 | INFO | Cliente válido: operación exitosa.
+2026-11-27 18:21:16,954 | INFO | Cliente válido: intento finalizado.
+2026-11-27 18:21:16,954 | ERROR | Correo inválido: Correo electrónico inválido.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 9, in <lambda>
+    ('Correo inválido', False, lambda: sistema.registrar_cliente('C2', 'Luis Demo', 'correo_invalido', '3000000002')),
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 83, in registrar_cliente
+    return self._agregar(self.__clientes, Cliente(*args, **kwargs))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2767096538.py", line 23, in __init__
+    raise DatosInvalidos('Correo electrónico inválido.')
+DatosInvalidos: Correo electrónico inválido.
+2026-11-27 18:21:16,955 | INFO | Correo inválido: intento finalizado.
+2026-11-27 18:21:16,955 | ERROR | Teléfono inválido: El teléfono debe contener 10 dígitos.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 10, in <lambda>
+    ('Teléfono inválido', False, lambda: sistema.registrar_cliente('C2', 'Luis Demo', 'luis@example.com', '123')),
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 83, in registrar_cliente
+    return self._agregar(self.__clientes, Cliente(*args, **kwargs))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2767096538.py", line 25, in __init__
+    raise DatosInvalidos('El teléfono debe contener 10 dígitos.')
+DatosInvalidos: El teléfono debe contener 10 dígitos.
+2026-11-27 18:21:16,955 | INFO | Teléfono inválido: intento finalizado.
+2026-11-27 18:21:16,955 | ERROR | Cliente duplicado: Código duplicado: C1.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 11, in <lambda>
+    ('Cliente duplicado', False, lambda: sistema.registrar_cliente('C1', 'Otro Demo', 'otro@example.com', '3000000003')),
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 83, in registrar_cliente
+    return self._agregar(self.__clientes, Cliente(*args, **kwargs))
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 70, in _agregar
+    raise DatosInvalidos(f'Código duplicado: {entidad.codigo}.')
+DatosInvalidos: Código duplicado: C1.
+2026-11-27 18:21:16,956 | INFO | Cliente duplicado: intento finalizado.
+2026-11-27 18:21:16,956 | INFO | Registro exitoso: ReservaSala S1.
+2026-11-27 18:21:16,956 | INFO | Sala válida: operación exitosa.
+2026-11-27 18:21:16,956 | INFO | Sala válida: intento finalizado.
+2026-11-27 18:21:16,956 | INFO | Registro exitoso: AlquilerEquipo S2.
+2026-11-27 18:21:16,956 | INFO | Equipo válido: operación exitosa.
+2026-11-27 18:21:16,956 | INFO | Equipo válido: intento finalizado.
+2026-11-27 18:21:16,956 | INFO | Registro exitoso: Asesoria S3.
+2026-11-27 18:21:16,956 | INFO | Asesoría válida: operación exitosa.
+2026-11-27 18:21:16,956 | INFO | Asesoría válida: intento finalizado.
+2026-11-27 18:21:16,956 | ERROR | Tarifa inválida: Tarifa: valor fuera del rango permitido.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 15, in <lambda>
+    ('Tarifa inválida', False, lambda: sistema.registrar_servicio(Asesoria('S4', 'Prueba', -10))),
+                                                                  ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/1431666911.py", line 6, in __init__
+    self.__tarifa = numero(tarifa, 'Tarifa', Decimal('0.01'), 100000000)
+                    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2845710304.py", line 61, in numero
+    raise DatosInvalidos(f'{campo}: valor fuera del rango permitido.')
+DatosInvalidos: Tarifa: valor fuera del rango permitido.
+2026-11-27 18:21:16,957 | INFO | Tarifa inválida: intento finalizado.
+2026-11-27 18:21:16,957 | INFO | Registro exitoso: Asesoria S4.
+2026-11-27 18:21:16,957 | INFO | Servicio deshabilitado: operación exitosa.
+2026-11-27 18:21:16,957 | INFO | Servicio deshabilitado: intento finalizado.
+2026-11-27 18:21:16,957 | INFO | Registro exitoso: Reserva R1.
+2026-11-27 18:21:16,957 | INFO | Reserva de sala válida: operación exitosa.
+2026-11-27 18:21:16,957 | INFO | Reserva de sala válida: intento finalizado.
+2026-11-27 18:21:16,957 | INFO | Reserva R1 confirmada.
+2026-11-27 18:21:16,957 | INFO | Confirmación válida: operación exitosa.
+2026-11-27 18:21:16,957 | INFO | Confirmación válida: intento finalizado.
+2026-11-27 18:21:16,957 | ERROR | Sala ocupada: Servicio S1 no disponible.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 19, in <lambda>
+    ('Sala ocupada', False, lambda: sistema.crear_reserva('R2', 'C1', 'S1', 1)),
+                                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 93, in crear_reserva
+    return self._agregar(self.__reservas, Reserva(codigo, c, s, duracion, **parametros))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 9, in __init__
+    raise ServicioNoDisponible(f'Servicio {servicio.codigo} no disponible.')
+ServicioNoDisponible: Servicio S1 no disponible.
+2026-11-27 18:21:16,957 | INFO | Sala ocupada: intento finalizado.
+2026-11-27 18:21:16,957 | ERROR | Duración no numérica: Duración: valor numérico inválido.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2845710304.py", line 57, in numero
+    n = Decimal(str(valor))
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 20, in <lambda>
+    ('Duración no numérica', False, lambda: sistema.crear_reserva('R2', 'C1', 'S2', 'abc')),
+                                            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 93, in crear_reserva
+    return self._agregar(self.__reservas, Reserva(codigo, c, s, duracion, **parametros))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 12, in __init__
+    self.__duracion = numero(duracion, 'Duración', 1, 72)
+                      ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2845710304.py", line 59, in numero
+    raise DatosInvalidos(f'{campo}: valor numérico inválido.') from error
+DatosInvalidos: Duración: valor numérico inválido.
+2026-11-27 18:21:16,958 | INFO | Duración no numérica: intento finalizado.
+2026-11-27 18:21:16,958 | ERROR | Inventario insuficiente: Cantidad: valor fuera del rango permitido.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 21, in <lambda>
+    ('Inventario insuficiente', False, lambda: sistema.crear_reserva('R2', 'C1', 'S2', 2, cantidad=8)),
+                                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 93, in crear_reserva
+    return self._agregar(self.__reservas, Reserva(codigo, c, s, duracion, **parametros))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 16, in __init__
+    self.__costo = servicio.calcular_costo(duracion, impuesto, descuento, **parametros)
+                   ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/1431666911.py", line 81, in calcular_costo
+    horas = self.validar_parametros(duracion, cantidad)
+  File "/tmp/ipykernel_574/1431666911.py", line 77, in validar_parametros
+    numero(cantidad, 'Cantidad', 1, self.__unidades, entero=True)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2845710304.py", line 61, in numero
+    raise DatosInvalidos(f'{campo}: valor fuera del rango permitido.')
+DatosInvalidos: Cantidad: valor fuera del rango permitido.
+2026-11-27 18:21:16,958 | INFO | Inventario insuficiente: intento finalizado.
+2026-11-27 18:21:16,958 | ERROR | Servicio no disponible: Servicio S4 no disponible.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 22, in <lambda>
+    ('Servicio no disponible', False, lambda: sistema.crear_reserva('R2', 'C1', 'S4', 1)),
+                                              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 93, in crear_reserva
+    return self._agregar(self.__reservas, Reserva(codigo, c, s, duracion, **parametros))
+                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_574/2494123736.py", line 9, in __init__
+    raise ServicioNoDisponible(f'Servicio {servicio.codigo} no disponible.')
+ServicioNoDisponible: Servicio S4 no disponible.
+2026-11-27 18:21:16,959 | INFO | Servicio no disponible: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Reserva R1 procesada; costo COP 107100.00.
+2026-11-27 18:21:16,959 | INFO | Fin del intento de procesamiento de R1.
+2026-11-27 18:21:16,959 | INFO | Procesamiento válido: operación exitosa.
+2026-11-27 18:21:16,959 | INFO | Procesamiento válido: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Fin del intento de procesamiento de R1.
+2026-11-27 18:21:16,959 | ERROR | Procesamiento repetido: Solo se procesan reservas confirmadas.
+Traceback (most recent call last):
+  File "/tmp/ipykernel_574/2494123736.py", line 101, in ejecutar
+    resultado = operacion()
+  File "/tmp/ipykernel_574/67784020.py", line 24, in <lambda>
+    ('Procesamiento repetido', False, lambda: sistema.reserva('R1').procesar()),
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/tmp/ipykernel_574/2494123736.py", line 47, in procesar
+    raise OperacionNoPermitida('Solo se procesan reservas confirmadas.')
+OperacionNoPermitida: Solo se procesan reservas confirmadas.
+2026-11-27 18:21:16,959 | INFO | Procesamiento repetido: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Registro exitoso: Reserva R2.
+2026-11-27 18:21:16,959 | INFO | Reserva de equipo válida: operación exitosa.
+2026-11-27 18:21:16,959 | INFO | Reserva de equipo válida: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Reserva R2 cancelada.
+2026-11-27 18:21:16,959 | INFO | Cancelación válida: operación exitosa.
+2026-11-27 18:21:16,959 | INFO | Cancelación válida: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Registro exitoso: Reserva R3.
+2026-11-27 18:21:16,959 | INFO | Reserva de asesoría válida: operación exitosa.
+2026-11-27 18:21:16,959 | INFO | Reserva de asesoría válida: intento finalizado.
+2026-11-27 18:21:16,959 | INFO | Fin de simulación: 20/20 casos conformes.
